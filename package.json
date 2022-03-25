@@ -22,7 +22,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.2",
     "@truffle/hdwallet-provider": "^2.0.0",
-    "@uniswap/v3-core": "^1.0.0",
+    "@uniswap/v3-periphery": "^1.4.0",
     "solc": "^0.8.11"
   }
 }

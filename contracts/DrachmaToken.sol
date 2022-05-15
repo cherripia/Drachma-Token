@@ -18,8 +18,9 @@ contract DrachmaToken is ERC20, ERC20Burnable, Ownable {
     address private _burnWallet = address(0xF4113a6e003061Ae82D0c12Cb948C5cfcb3aE987);
 
     uint256 _developerFee = 2; // Percentage of trades on exchanges to developer wallets.
-    uint256 _burnAndCharityFee = 2; // Percentage of transactions burned (DRC) and donated (ETH) every transaction.
     uint256 _liquidityFee = 1; // Liquidity Fee 
+    uint256 _charityFee = 2;
+    uint256 _burnFee = 2;
 
     constructor(uint256 _supply) ERC20("Drachma", "DRC") {
         _mint(_msgSender(), _supply * (10 ** decimals()));
@@ -31,11 +32,11 @@ contract DrachmaToken is ERC20, ERC20Burnable, Ownable {
             _transfer(_msgSender(), recipient, amount);
         } else {
 
-            /*
+            
             // Burn 2% to charity wallet.
             uint256 charityAmount = amount.mul(_charityFee).div(100);
             _transfer(_msgSender(), _charityWallet, amount.sub(charityAmount));
-            */
+            
 
             // Burn 2% on all transactions.
             uint256 burnAmount = amount.mul(_burnFee).div(100);

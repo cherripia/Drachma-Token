@@ -425,7 +425,6 @@ contract Drachma is IERC20, Ownable  {
         _tokenTicker = tokenTicker;
         _holdings[owner()] = (_originalSupply * (10 ** _tokenDecimals));
         _currentSupply = _holdings[owner()];
-        console.log(_tokenName);
 
         IUniswapV2Router02 _router = IUniswapV2Router02(routerAddress);
         pair = IUniswapV2Factory(_router.factory()).createPair(address(this), _router.WETH());

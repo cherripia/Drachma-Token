@@ -379,7 +379,7 @@ abstract contract Ownable is Context {
     }
 }
 
-contract Miceys is IERC20, Ownable  {
+contract Drachma is IERC20, Ownable  {
 
     using SafeMath for uint256;
     

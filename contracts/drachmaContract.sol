@@ -408,7 +408,7 @@ contract Drachma is IERC20, Ownable  {
     IUniswapV2Router02 public immutable router;
     address public immutable pair;
 
-    // Reflections and burn.
+    // Charity and burn.
     address public USD = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; // BUSD/USDC.
     address public DEAD = 0x000000000000000000000000000000000000dEaD; // Burn address.
     address public DEV = 0x32d7C78d7d1F3EF72cda760bC46c52e285C79C7A; // Developer address.
